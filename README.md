@@ -41,3 +41,40 @@ This web application (built with **Laravel** and **MySQL**) serves as the core b
 ## 📐 Entity-Relationship Diagram / Diagrama Entidad-Relación
 
 <img width="8192" height="4855" alt="ER diagram" src="https://github.com/user-attachments/assets/2983a7ca-50c9-46f1-8b37-ceaced75f5f1" />
+
+--- 
+
+---
+
+## 🇪🇸 Funcionalidad del Backend (API REST)
+
+Se desarrolló una API RESTful para la gestión centralizada de **Usuarios** y **Órdenes**, implementando operaciones CRUD completas. El backend cuenta con validación estricta de datos, mapeo de roles y borrado lógico (Soft Deletes) para preservar el historial de transacciones sin destruir registros físicos en la base de datos.
+
+### Endpoints Disponibles
+
+| Método | Endpoint | Propósito |
+|---|---|---|
+| **POST** | `/api/users` | Registra un nuevo usuario en el sistema validando su rol y tipo de cliente. |
+| **POST** | `/api/orders` | Crea una nueva orden vinculada a un usuario, empleado y sucursal. |
+| **GET** | `/api/orders/{id}` | Recupera los detalles específicos de una orden activa. |
+| **PUT** | `/api/orders/{id}` | Actualiza la información de una orden (ej. cambiar el estado a "Completado"). |
+| **DELETE** | `/api/orders/{id}` | Ejecuta un borrado lógico (Soft Delete) archivando la orden por seguridad. |
+| **GET** | `/api/orders/archived` | Devuelve la lista de todas las órdenes que han sido archivadas (borrado lógico). |
+
+---
+
+## 🇬🇧 Backend Functionality (REST API)
+
+A RESTful API was developed for the centralized management of **Users** and **Orders**, implementing full CRUD operations. The backend features strict data validation, role mapping, and logical deletion (Soft Deletes) to preserve transaction history without permanently destroying database rows.
+
+### Available API Endpoints
+
+| Method | Endpoint | Purpose |
+|---|---|---|
+| **POST** | `/api/users` | Registers a new user in the system, validating role and customer type. |
+| **POST** | `/api/orders` | Creates a new order linked to a specific user, employee, and branch. |
+| **GET** | `/api/orders/{id}` | Retrieves the specific details of an active order. |
+| **PUT** | `/api/orders/{id}` | Updates an existing order's information (e.g., changing status to "Completed"). |
+| **DELETE** | `/api/orders/{id}` | Executes a soft delete, archiving the order for data integrity and security. |
+| **GET** | `/api/orders/archived` | Fetches a list of all soft-deleted (archived) orders. |
+
