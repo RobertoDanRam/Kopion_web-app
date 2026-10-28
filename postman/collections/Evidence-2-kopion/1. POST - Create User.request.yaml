@@ -1,0 +1,24 @@
+$kind: http-request
+description: ""
+url: http://127.0.0.1:8000/api/users
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"name\": \"Roberto Ramos\",\r
+
+    \    \"email\": \"roberto.ramos@kopion.com\",\r
+
+    \    \"password\": \"password123\",\r
+
+    \    \"password_confirmation\": \"password123\",\r
+
+    \    \"role_id\": 4,\r
+
+    \    \"school_id\": 1,\r
+
+    \    \"customer_type\": \"Student\"\r
+
+    }"
+order: 1000

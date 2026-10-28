@@ -25,6 +25,7 @@ class User extends Authenticatable
         'branch_id',
         'school_id',
         'customer_type',
+        'is_active', // Agregado para permitir actualización masiva
     ];
 
     public function role(): BelongsTo

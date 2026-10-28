@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
+            $table->boolean('is_active')->default(true); // Columna agregada para manejar el estado inactivo
             $table->foreignId('role_id')->constrained('roles');
             $table->foreignId('branch_id')->nullable()->constrained('branches'); // Para Empleados
             $table->foreignId('school_id')->nullable()->constrained('schools'); // Para Clientes
